@@ -6,7 +6,7 @@
 # ### After downloading our dataset we see it's coded in the ubyte form
 # - We then use the following function to read the data and return it as a numpy array
 
-# In[7]:
+# In[1]:
 
 
 import struct
@@ -26,7 +26,7 @@ from keras.datasets import fashion_mnist
 
 # ### Let's inspect our dataset
 
-# In[8]:
+# In[2]:
 
 
 # printing the number of samples in x_train, x_test, y_train, y_test
@@ -46,7 +46,7 @@ print ("Labels in y_test:" + str(y_test.shape))
 
 # ### Let's create our model
 
-# In[10]:
+# In[3]:
 
 
 from keras.datasets import mnist
@@ -127,12 +127,12 @@ print(model.summary())
 
 # ### Let's train our model
 
-# In[11]:
+# In[4]:
 
 
 history = model.fit(x_train, y_train,
           batch_size=batch_size,
-          epochs=epochs,
+          epochs=1,
           verbose=1,
           validation_data=(x_test, y_test))
 
@@ -141,22 +141,71 @@ print('Test loss:', score[0])
 print('Test accuracy:', score[1])
 
 
+# In[5]:
+
+
+type(score)
+
+
+# In[6]:
+
+
+score[0]
+
+
+# In[7]:
+
+
+score
+
+
+# In[8]:
+
+
+score[1]
+
+
+# In[9]:
+
+
+import numpy as np
+
+
+# In[10]:
+
+
+ans=np.asarray(score)
+
+
+# In[11]:
+
+
+ans
+
+
+# In[12]:
+
+
+type(ans)
+ans[1]
+
+
+# In[13]:
+
+
+res = round(ans[1]*100 , 2)
+
+
 # In[ ]:
 
 
 
 
 
-# In[ ]:
+# In[15]:
 
 
-
-
-
-# In[ ]:
-
-
-
+np.savetxt('accuracy.txt', [res])
 
 
 # In[ ]:
