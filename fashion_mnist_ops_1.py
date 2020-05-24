@@ -129,7 +129,7 @@ print(model.summary())
 
 # In[4]:
 
-
+#keep the varibales here so as to see the change
 history = model.fit(x_train, y_train,
           batch_size=batch_size,
           epochs=epochs,
