@@ -60,7 +60,7 @@ from keras import backend as K
 
 # Training Parameters
 batch_size = 128
-epochs = 3
+epochs = 2
 
 # Lets store the number of rows and columns
 img_rows = x_train[0].shape[0]
@@ -132,7 +132,7 @@ print(model.summary())
 
 history = model.fit(x_train, y_train,
           batch_size=batch_size,
-          epochs=1,
+          epochs=epochs,
           verbose=1,
           validation_data=(x_test, y_test))
 
