@@ -60,7 +60,7 @@ from keras import backend as K
 
 # Training Parameters
 batch_size = 128
-epochs = 2
+epochs = 1
 
 # Lets store the number of rows and columns
 img_rows = x_train[0].shape[0]
