@@ -3,7 +3,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 
-mail_content = "For Developer, This is to inform your that the model cannot be loaded correctly for training due to some errors in the code. You are requested to look into the model and rectify the code soon. Thank You! :)"
+mail_content = "For Developer, This is to inform you that model has achieved the desired accuracy and hencforth, will be used for further productions Thank You! :)"
 
 #The mail addresses and password
 sender_address = 'coding548@gmail.com'
@@ -15,7 +15,7 @@ receiver_address = 'aashi.gupta6477@gmail.com@gmail.com'
 message = MIMEMultipart()
 message['From'] = sender_address
 message['To'] = receiver_address
-message['Subject'] = 'Failure of model for Training due to error in code'   #The subject line
+message['Subject'] = 'Success of Model Training'   #The subject line
 
 
 #The body and the attachments for the mail
