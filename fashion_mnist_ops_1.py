@@ -205,7 +205,7 @@ res = round(ans[1]*100 , 2)
 # In[15]:
 
 
-np.savetxt('accuracy.txt', [res])
+np.savetxt('/root/accuracy.txt', [res])
 
 
 # In[ ]:
