@@ -59,8 +59,8 @@ from keras.layers import Conv2D, MaxPooling2D, BatchNormalization
 from keras import backend as K
 
 # Training Parameters
-batch_size = 128
-epochs = 1
+#batch_size = 128
+#epochs = 1
 
 # Lets store the number of rows and columns
 img_rows = x_train[0].shape[0]
@@ -107,6 +107,8 @@ model.add(BatchNormalization())
 model.add(MaxPooling2D(pool_size=(2, 2)))
 
 
+
+
 model.add(Dropout(0.25))
 
 model.add(Flatten())
@@ -116,6 +118,8 @@ model.add(BatchNormalization())
 model.add(Dropout(0.5))
 model.add(Dense(num_classes, activation='softmax'))
 
+batch_size = 128
+epochs = 2
 model.compile(loss = 'categorical_crossentropy',
               optimizer = keras.optimizers.Adadelta(),
               metrics = ['accuracy'])
