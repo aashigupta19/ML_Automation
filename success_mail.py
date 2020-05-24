@@ -3,10 +3,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 
-mail_content = '''For Developer,
-This is to inform your that the model cannot be loaded correctly for training due to some errors in the code. You are requested to look into the model and rectify the code soon.
-Thank You! :)
-' ' '
+mail_content = "For Developer, This is to inform your that the model cannot be loaded correctly for training due to some errors in the code. You are requested to look into the model and rectify the code soon. Thank You! :)"
 
 #The mail addresses and password
 sender_address = 'coding548@gmail.com'
